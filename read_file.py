@@ -1,7 +1,8 @@
+# Importing standard libraries
 import sys
 
 
-class ReadFile:
+class FileReader:
     def __init__(self):
         self.len_of_args = len(sys.argv)
         self.filename = ""
@@ -19,5 +20,5 @@ class ReadFile:
     def read_file(self):
         self.check()
         fd = open(self.filename, 'r')
-        data = fd.readlines();
+        data = fd.readlines()
         return data
