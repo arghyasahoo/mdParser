@@ -5,11 +5,13 @@ import sys
 from inline_parser import InlineParser
 
 
-class BoldParser:
+class ItalicsParser:
     def __init__(self, line):
         self.currline = line
-        self.parse_bold()
+        self.parse_italics()
 
-    def parse_bold(self):
-        formatted_line = InlineParser(self.currline, "bold").parse(r"\*\*", r"\_\_")
+    def parse_italics(self):
+        formatted_line = InlineParser(self.currline, "italics").parse(
+            "^\*[^*]+$", "^\_[^_]+$"
+        )
         sys.stdout.write(formatted_line)

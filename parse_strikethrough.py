@@ -5,11 +5,11 @@ import sys
 from inline_parser import InlineParser
 
 
-class BoldParser:
+class StrikethroughParser:
     def __init__(self, line):
         self.currline = line
-        self.parse_bold()
+        self.parse_strikethrough()
 
-    def parse_bold(self):
-        formatted_line = InlineParser(self.currline, "bold").parse(r"\*\*", r"\_\_")
+    def parse_strikethrough(self):
+        formatted_line = InlineParser(self.currline, "strikethrough").parse(r"~~")
         sys.stdout.write(formatted_line)
