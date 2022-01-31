@@ -8,4 +8,6 @@ color_map = {
     "bold": "\033[1m",
     "italics": "\033[3m",
     "strikethrough": "\033[9m",
+    "blockquote": "\033[2m",
+    "link": "\033[4;34m",
 }
